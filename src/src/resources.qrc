@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/translations">
+        <file alias="cs">language/cs.qm</file>
+        <!--file alias="de">language/de.qm</file-->
+        <file alias="qt_cs">language/qt_cs.qm</file>
+        <!--file alias="qt_de">language/qt_de.qm</file-->
+        <file alias="qt_en">language/qt_en.qm</file>
+        <file alias="qtbase_cs">language/qtbase_cs.qm</file>
+        <!--file alias="qtbase_de">language/qtbase_de.qm</file-->
+        <file alias="qtbase_en">language/qtbase_en.qm</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="web">ico/web.png</file>
+        <file alias="partners">ico/partners.png</file>
+        <file alias="add">ico/add.png</file>
+        <file alias="arrow-down">ico/arrow-down.png</file>
+        <file alias="arrow-left">ico/arrow-left.png</file>
+        <file alias="arrow-right">ico/arrow-right.png</file>
+        <file alias="arrow-up">ico/arrow-up.png</file>
+        <file alias="delete">ico/delete2.png</file>
+        <file alias="edit">ico/edit.png</file>
+        <file alias="man">ico/man.png</file>
+        <file alias="new">ico/new.png</file>
+        <file alias="open">ico/open.png</file>
+        <file alias="save">ico/save.png</file>
+        <file alias="source">ico/source.png</file>
+        <file alias="woman">ico/woman.png</file>
+        <file alias="info">ico/info.png</file>
+    </qresource>
+</RCC>
