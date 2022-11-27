@@ -33,6 +33,8 @@
 #include "menubar/menusettings/actionsettingsdescriptionformat.h"
 #include "menubar/menuhelp/actionabout.h"
 
+#include "menubar/menuperson/actionpersondbimport.h"
+
 #include "userinterface/dialogs/messageboxes/messagesave.h"
 
 class MenuBar : public QMenuBar
@@ -60,6 +62,9 @@ private:
     ActionPersonAddMan* _menuPersonAddMan;
     ActionPersonAddWoman* _menuPersonAddWoman;
     ActionPersonDelete* _menuPersonDelete;
+
+    ActionPersonDbImport* _menuPersonDbImport;
+
 
     QMenu _menuTrees;
     ActionTree* _menuTreeOutletAncestral;

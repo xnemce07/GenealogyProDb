@@ -145,6 +145,7 @@ SOURCES += \
     userinterface/dialogs/file/savefiledialog.cpp \
     userinterface/dialogs/settings/dialogsettingsevnironment.cpp \
     userinterface/menubar/menuhelp/actionabout.cpp \
+    userinterface/menubar/menuperson/actionpersondbimport.cpp \
     userinterface/menubar/menusettings/actionsettingsenvironment.cpp \
     userinterface/menubar/menusettings/actionsettingsconstraints.cpp \
     userinterface/identifierhistory.cpp \
@@ -307,6 +308,7 @@ HEADERS += \
     userinterface/dialogs/file/savefiledialog.h \
     userinterface/dialogs/settings/dialogsettingsevnironment.h \
     userinterface/menubar/menuhelp/actionabout.h \
+    userinterface/menubar/menuperson/actionpersondbimport.h \
     userinterface/menubar/menusettings/actionsettingsenvironment.h \
     userinterface/menubar/menusettings/actionsettingsconstraints.h \
     userinterface/identifierhistory.h \

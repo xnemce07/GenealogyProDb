@@ -20,6 +20,7 @@ MenuBar::MenuBar(Kernel &k, Identifier &p, Identifier &s, IdentifierHistory &h, 
     _menuPersonAddMan = new ActionPersonAddMan(_kernel);
     _menuPersonAddWoman = new ActionPersonAddWoman(_kernel);
     _menuPersonDelete = new ActionPersonDelete(_kernel, _proband);
+    _menuPersonDbImport = new ActionPersonDbImport(_kernel);
 
     _menuTreeOutletAncestral = new ActionTree(TreeType::ANCESTRAL_OUTLET);
     _menuTreeFamilyTree = new ActionTree(TreeType::FAMILY_TREE);
@@ -58,6 +59,7 @@ MenuBar::MenuBar(Kernel &k, Identifier &p, Identifier &s, IdentifierHistory &h, 
     _menuPerson.addAction(_menuPersonAddMan);
     _menuPerson.addAction(_menuPersonAddWoman);
     _menuPerson.addAction(_menuPersonDelete);
+    _menuPerson.addAction(_menuPersonDbImport);
 
     _menuTrees.addAction(_menuTreeOutletAncestral);
     _menuTrees.addAction(_menuTreeFamilyTree);
@@ -106,6 +108,8 @@ MenuBar::MenuBar(Kernel &k, Identifier &p, Identifier &s, IdentifierHistory &h, 
     connect(_menuPersonAddWoman, &ActionPersonAddWoman::probandChanged, this, &MenuBar::probandChanged);
     connect(_menuSettingsFormatPerson, &ActionSettingsDescriptionFormat::probandChanged, this, &MenuBar::probandChanged);
 
+    connect(_menuPersonDbImport, &ActionPersonDbImport::probandChanged, this, &MenuBar::probandChanged);
+
     // Descriptions changed
     connect(_menuSettingsFormatPerson, &ActionSettingsDescriptionFormat::probandChanged, this, &MenuBar::probandChanged);
     connect(_menuSettingsFormatSourceCitation, &ActionSettingsDescriptionFormat::probandChanged, this, &MenuBar::probandChanged);
@@ -146,6 +150,8 @@ MenuBar::MenuBar(Kernel &k, Identifier &p, Identifier &s, IdentifierHistory &h, 
     connect(this, &MenuBar::fileLoaded, _menuTreeCustom, &Action::enable);
     connect(this, &MenuBar::fileLoaded, _menuTreeExport, &Action::enable);
 
+    connect(this, &MenuBar::fileLoaded, _menuPersonDbImport, &ActionPersonDbImport::enable);
+
     // Connect file closed to disable actions
     connect(this, &MenuBar::fileClosed, this, &MenuBar::fileWasClosed);
     connect(this, &MenuBar::fileClosed, _menuFileInformation, &ActionInformation::disable);
@@ -161,6 +167,8 @@ MenuBar::MenuBar(Kernel &k, Identifier &p, Identifier &s, IdentifierHistory &h, 
     connect(this, &MenuBar::fileClosed, _menuTreeOutletKognat, &Action::disable);
     connect(this, &MenuBar::fileClosed, _menuTreeCustom, &Action::disable);
     connect(this, &MenuBar::fileClosed, _menuTreeExport, &Action::disable);
+
+    connect(this, &MenuBar::fileClosed, _menuPersonDbImport, &ActionPersonDbImport::disable);
 
     // Connect draw tree
     connect(_menuTreeOutletAncestral, &ActionTree::drawTree, this, &MenuBar::drawTree);
@@ -195,6 +203,8 @@ void MenuBar::translate()
     _menuPersonAddMan->translate();
     _menuPersonAddWoman->translate();
     _menuPersonDelete->translate();
+
+    _menuPersonDbImport->translate();
 
     _menuTreeOutletAncestral->translate();
     _menuTreeFamilyTree->translate();
