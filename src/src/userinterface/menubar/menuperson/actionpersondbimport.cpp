@@ -28,8 +28,8 @@ void ActionPersonDbImport::modifyPerson()
 
     QString dbHostname = "localhost";
     QString dbName = "demos";
-    QString dbUsername = "root";
-    QString dbPassword = "369456258127";
+    QString dbUsername = "genealogy";
+    QString dbPassword = "Genealogy49!";
 
 //    bool ok = true;
 
