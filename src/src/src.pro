@@ -8,7 +8,8 @@
 #-------------------------------------------------
 
 QT       += core gui \
-            printsupport #\
+            printsupport \
+            sql #\
             #autoupdatercore \
             #autoupdatergui
 
@@ -225,7 +226,8 @@ SOURCES += \
     userinterface/centralwindow/tabview/tabindividual/listview/tablecellref.cpp \
     userinterface/centralwindow/tabview/tabindividual/listview/tablecelltext.cpp \
     userinterface/centralwindow/tabview/tabnote.cpp \
-    userinterface/objects/translatableobject.cpp
+    userinterface/objects/translatableobject.cpp# \
+#    userinterface/menubar/menuperson/actionpersondbimport.cpp
 
 HEADERS += \
     kernel.h \
@@ -389,4 +391,5 @@ HEADERS += \
     userinterface/centralwindow/tabview/tabindividual/listview/tablecellref.h \
     userinterface/centralwindow/tabview/tabindividual/listview/tablecelltext.h \
     userinterface/centralwindow/tabview/tabnote.h \
-    userinterface/objects/translatableobject.h
+    userinterface/objects/translatableobject.h #\
+    /# userinterface/menubar/menuperson/actionpersondbimport.h

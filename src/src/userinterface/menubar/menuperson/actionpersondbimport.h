@@ -7,6 +7,7 @@
 #define ACTIONPERSONDBIMPORT_H
 
 #include <QSettings>
+#include <QtSql>
 
 #include "../action.h"
 
